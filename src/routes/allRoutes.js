@@ -24,7 +24,7 @@ const userRoutes = [
   { path : '/items' , component : Items},
 
   // this route should be at the end of all other routes
-  { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> },
+  { path: "/", exact: true, component: () => <Redirect to="/home" /> },
 ]
 
 const authRoutes = [
