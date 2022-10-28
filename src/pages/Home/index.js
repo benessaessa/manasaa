@@ -34,7 +34,7 @@ const Home = () => {
               </Link>
               <Link to="/login">
                 <button className="height56 btnGetStarted px-5 border-0 fw-bold">
-                  Login
+                  Login to my website
                 </button>
               </Link>
             </div>
