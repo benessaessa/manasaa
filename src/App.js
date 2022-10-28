@@ -7,6 +7,8 @@ import { connect } from "react-redux"
 // Import Routes all
 import { userRoutes, authRoutes } from "./routes/allRoutes"
 
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 // Import all middleware
 import Authmiddleware from "./routes/middleware/Authmiddleware"
 
@@ -40,6 +42,7 @@ fakeBackend()
 // initFirebaseBackend(firebaseConfig)
 
 const App = props => {
+  AOS.init()
   function getLayout() {
     let layoutCls = VerticalLayout
     switch (props.layout.layoutType) {

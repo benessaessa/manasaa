@@ -11,11 +11,6 @@ import { withRouter, Link } from "react-router-dom"
 // availity-reactstrap-validation
 import { AvForm, AvField } from "availity-reactstrap-validation"
 
-//Social Media Imports
-import { GoogleLogin } from "react-google-login"
-// import TwitterLogin from "react-twitter-auth"
-import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props"
-
 // actions
 import { loginUser, apiError, socialLogin } from "../../store/actions"
 
@@ -23,48 +18,14 @@ import { loginUser, apiError, socialLogin } from "../../store/actions"
 import profile from "assets/images/profile-img.png"
 import logo from "assets/images/logo.svg"
 
-//Import config
-import { facebook, google } from "../../config"
-
 const Login = props => {
   // handleValidSubmit
   const handleValidSubmit = (event, values) => {
     props.loginUser(values, props.history)
   }
 
-  const signIn = (res, type) => {
-    const { socialLogin } = props
-    if (type === "google" && res) {
-      const postData = {
-        name: res.profileObj.name,
-        email: res.profileObj.email,
-        token: res.tokenObj.access_token,
-        idToken: res.tokenId,
-      }
-      socialLogin(postData, props.history, type)
-    } else if (type === "facebook" && res) {
-      const postData = {
-        name: res.name,
-        email: res.email,
-        token: res.accessToken,
-        idToken: res.tokenId,
-      }
-      socialLogin(postData, props.history, type)
-    }
-  }
-
-  //handleGoogleLoginResponse
-  const googleResponse = response => {
-    signIn(response, "google")
-  }
-
   //handleTwitterLoginResponse
   // const twitterResponse = e => {}
-
-  //handleFacebookLoginResponse
-  const facebookResponse = response => {
-    signIn(response, "facebook")
-  }
 
   return (
     <React.Fragment>
@@ -76,7 +37,7 @@ const Login = props => {
           <i className="fas fa-home h2" />
         </Link>
       </div>
-      <div className="account-pages my-5 pt-sm-5">
+      <div className="account-pages pt-5 pb-3">
         <Container>
           <Row className="justify-content-center">
             <Col md={8} lg={6} xl={5}>
@@ -167,66 +128,6 @@ const Login = props => {
                       </div>
 
                       <div className="mt-4 text-center">
-                        <h5 className="font-size-14 mb-3">Sign in with</h5>
-
-                        <ul className="list-inline">
-                          <li className="list-inline-item">
-                            <FacebookLogin
-                              appId={facebook.APP_ID}
-                              autoLoad={false}
-                              callback={facebookResponse}
-                              render={renderProps => (
-                                <Link
-                                to="#"
-                                  className="social-list-item bg-primary text-white border-primary"
-                                  onClick={renderProps.onClick}
-                                >
-                                  <i className="mdi mdi-facebook" />
-                                </Link>
-                              )}
-                            />
-                          </li>
-                          {/*<li className="list-inline-item">*/}
-                          {/*  <TwitterLogin*/}
-                          {/*    loginUrl={*/}
-                          {/*      "http://localhost:4000/api/v1/auth/twitter"*/}
-                          {/*    }*/}
-                          {/*    onSuccess={this.twitterResponse}*/}
-                          {/*    onFailure={this.onFailure}*/}
-                          {/*    requestTokenUrl={*/}
-                          {/*      "http://localhost:4000/api/v1/auth/twitter/revers"*/}
-                          {/*    }*/}
-                          {/*    showIcon={false}*/}
-                          {/*    tag={"div"}*/}
-                          {/*  >*/}
-                          {/*    <a*/}
-                          {/*      href=""*/}
-                          {/*      className="social-list-item bg-info text-white border-info"*/}
-                          {/*    >*/}
-                          {/*      <i className="mdi mdi-twitter"/>*/}
-                          {/*    </a>*/}
-                          {/*  </TwitterLogin>*/}
-                          {/*</li>*/}
-                          <li className="list-inline-item">
-                            <GoogleLogin
-                              clientId={google.CLIENT_ID}
-                              render={renderProps => (
-                                <Link
-                                to="#"
-                                  className="social-list-item bg-danger text-white border-danger"
-                                  onClick={renderProps.onClick}
-                                >
-                                  <i className="mdi mdi-google" />
-                                </Link>
-                              )}
-                              onSuccess={googleResponse}
-                              onFailure={() => {}}
-                            />
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div className="mt-4 text-center">
                         <Link to="/forgot-password" className="text-muted">
                           <i className="mdi mdi-lock me-1" />
                           Forgot your password?
@@ -236,7 +137,7 @@ const Login = props => {
                   </div>
                 </CardBody>
               </Card>
-              <div className="mt-5 text-center">
+              <div className="mt-2 text-center">
                 <p>
                   Don&#39;t have an account ?{" "}
                   <Link
@@ -244,12 +145,8 @@ const Login = props => {
                     className="fw-medium text-primary"
                   >
                     {" "}
-                    Signup now{" "}
+                    Register now{" "}
                   </Link>{" "}
-                </p>
-                <p>
-                  © {new Date().getFullYear()} Skote. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
                 </p>
               </div>
             </Col>

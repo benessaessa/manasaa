@@ -102,7 +102,7 @@ const SidebarContent = props => {
             <li>
               <Link to="/items" className="waves-effect">
                 <i className="bx bx-briefcase"></i>
-                <span>{props.t("Items")}</span>
+                <span>{props.t("Courses")}</span>
               </Link>
             </li>
           </ul>

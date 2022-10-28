@@ -16,6 +16,7 @@ import ForgetPwd from "../pages/Authentication/ForgetPassword"
 // Dashboard
 import Dashboard from "../pages/Dashboard/index"
 import Items  from 'pages/Items/index'
+import Home from "pages/Home"
 
 const userRoutes = [
   { path: "/dashboard", component: Dashboard },
@@ -27,6 +28,7 @@ const userRoutes = [
 ]
 
 const authRoutes = [
+  {path: "/home" , component:Home},
   { path: "/logout", component: Logout },
   { path: "/login", component: Login },
   { path: "/forgot-password", component: ForgetPwd },

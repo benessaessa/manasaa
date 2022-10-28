@@ -37,7 +37,7 @@ const Register = props => {
           <i className="fas fa-home h2" />
         </Link>
       </div>
-      <div className="account-pages my-5 pt-sm-5">
+      <div className="account-pages pt-5">
         <Container>
           <Row className="justify-content-center">
             <Col md={8} lg={6} xl={5}>
@@ -47,7 +47,7 @@ const Register = props => {
                     <Col className="col-7">
                       <div className="text-primary p-4">
                         <h5 className="text-primary">Free Register</h5>
-                        <p>Get your free Skote account now.</p>
+                        <p>Get your free account</p>
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
@@ -92,6 +92,16 @@ const Register = props => {
 
                       <div className="mb-3">
                         <AvField
+                          name="username"
+                          label="Username"
+                          type="text"
+                          required
+                          placeholder="Enter username"
+                        />
+                      </div>
+
+                      <div className="mb-3">
+                        <AvField
                           id="email"
                           name="email"
                           label="Email"
@@ -104,8 +114,8 @@ const Register = props => {
 
                       <div className="mb-3">
                         <AvField
-                          name="username"
-                          label="Username"
+                          name="code"
+                          label="Code"
                           type="text"
                           required
                           placeholder="Enter username"
@@ -130,29 +140,25 @@ const Register = props => {
                         </button>
                       </div>
 
-                      <div className="mt-4 text-center">
+                      {/* <div className="mt-4 text-center">
                         <p className="mb-0">
                           By registering you agree to the Skote{" "}
                           <Link to="#" className="text-primary">
                             Terms of Use
                           </Link>
                         </p>
-                      </div>
+                      </div> */}
                     </AvForm>
                   </div>
                 </CardBody>
               </Card>
-              <div className="mt-5 text-center">
+              <div className="mt-2 text-center">
                 <p>
                   Already have an account ?{" "}
                   <Link to="/login" className="font-weight-medium text-primary">
                     {" "}
                     Login
                   </Link>{" "}
-                </p>
-                <p>
-                  © {new Date().getFullYear()} Skote. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
                 </p>
               </div>
             </Col>

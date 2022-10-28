@@ -22,13 +22,14 @@ import { withRouter } from "react-router-dom"
 //Import Breadcrumb
 import Breadcrumb from "../../components/Common/Breadcrumb"
 
-import avatar from "../../assets/images/users/avatar-1.jpg"
+import avatar from "../../assets/images/users/avatar-2.jpg"
 // actions
 import { editProfile, resetProfileFlag } from "../../store/actions"
 
 const UserProfile = props => {
   const [email, setemail] = useState("")
   const [name, setname] = useState("")
+  const [code, setCode] = useState("")
   const [idx, setidx] = useState(1)
 
   useEffect(() => {
@@ -37,6 +38,7 @@ const UserProfile = props => {
       if (process.env.REACT_APP_DEFAULTAUTH === "firebase") {
         setname(obj.displayName)
         setemail(obj.email)
+        setCode(obj.code)
         setidx(obj.uid)
       } else if (
         process.env.REACT_APP_DEFAULTAUTH === "fake" ||
@@ -44,6 +46,7 @@ const UserProfile = props => {
       ) {
         setname(obj.username)
         setemail(obj.email)
+        setCode(obj.code)
         setidx(obj.uid)
       }
       setTimeout(() => {
@@ -64,7 +67,7 @@ const UserProfile = props => {
         </MetaTags>
         <Container fluid>
           {/* Render Breadcrumb */}
-          <Breadcrumb title="Skote" breadcrumbItem="Profile" />
+          <Breadcrumb title="Manassa" breadcrumbItem="Profile" />
 
           <Row>
             <Col lg="12">
@@ -78,7 +81,7 @@ const UserProfile = props => {
               <Card>
                 <CardBody>
                   <Media>
-                    <div className="ms-3">
+                    <div className="ms-2 me-2">
                       <img
                         src={avatar}
                         alt=""
@@ -113,6 +116,15 @@ const UserProfile = props => {
                     name="username"
                     label="User Name"
                     value={name}
+                    className="form-control mb-3"
+                    placeholder="Enter User Name"
+                    type="text"
+                    required
+                  />
+                  <AvField
+                    name="username"
+                    label="Student Code"
+                    value={code}
                     className="form-control"
                     placeholder="Enter User Name"
                     type="text"
