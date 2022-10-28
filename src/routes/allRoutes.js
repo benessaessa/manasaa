@@ -25,7 +25,7 @@ const userRoutes = [
 
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/home" /> },
-]
+] 
 
 const authRoutes = [
   {path: "/home" , component:Home },
