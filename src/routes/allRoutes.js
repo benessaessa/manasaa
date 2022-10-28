@@ -28,7 +28,7 @@ const userRoutes = [
 ]
 
 const authRoutes = [
-  {path: "/home" , component:Home},
+  {path: "/home" , component:Home },
   { path: "/logout", component: Logout },
   { path: "/login", component: Login },
   { path: "/forgot-password", component: ForgetPwd },
