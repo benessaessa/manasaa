@@ -71,9 +71,11 @@ const Home = () => {
                 <h4 className="py-3">
                 رؤى في الوقت الفعلي لفهم الطلاب من خلال الدروس التفاعلية ومقاطع الفيديو التفاعلية واللعبة والأنشطة - كل ذلك في نظام أساسي واحد.
                 </h4>
-                <button className="btn height56 btnGetStarted font-size-16 px-5 mt-4 mb-5">
-                  يمكنك البدء مجانا
-                </button>
+                <Link to="/register">
+                  <button className="btn height56 btnGetStarted font-size-16 px-5 mt-4 mb-5">
+                    يمكنك البدء مجانا
+                  </button>
+                </Link>
               </div>
             </Col>
           </Row>
@@ -135,12 +137,13 @@ const Home = () => {
             <h2 className='textPrim text-center'>تصور ودعم فهم الطالب</h2>
             <Row className='justify-content-between pt-5'>
               <Col lg="5">
-                <img src={image4} className="img-fluid" data-aos="fade-right"
+                <img src={image4} className="img-fluid mb-4" data-aos="fade-right"
                 data-aos-delay="200"
                 data-aos-duration="2000" />
               </Col>
               <Col lg="6">
                 <div data-aos="fade-left" dir='rtl'
+                className='px-2'
                 data-aos-delay="200"
                 data-aos-duration="2000">
                   <ul className='pe-lg-0'>
@@ -172,10 +175,10 @@ const Home = () => {
         </div>
       </div>
       {/* Footer */}
-      <div className="footerHome p-4" dir='rtl'>
-        <div className="container pt-4">
+      <div className="footerHome" dir='rtl'>
+        <div className="container pt-4 overflow-hidden">
             <div className="row justify-content-between">
-                <div className="col-lg-6">
+                <div className="col-lg-6 px-3">
                     <img src={logoImage} alt="" data-aos="fade-left"
                       data-aos-delay="200"
                       data-aos-duration="2000" />
@@ -183,8 +186,8 @@ const Home = () => {
                     يساعد Learn with me الطلاب على التواصل مع المدرس على نطاق واسع من خلال هياكل العمولات المخصصة لبرنامج التسويق عبر الشركاء التابعين والمؤثرين لعلامات التجارة الإلكترونية.
                     </p>
                 </div>
-                <div className="col-lg-3 text-start">
-                    <p className="text-muted">Connect with us</p>
+                <div className="col-lg-3 text-end px-3">
+                    <p className="text-white opacity-75">يمكنك التواصل معنا</p>
                     <p>
                       <Link className="text-white text-decoration-none px-2" to={""} alt="">
                           <i className="fab fa-facebook fa-lg"></i>
@@ -199,12 +202,12 @@ const Home = () => {
                 </div>
             </div>
             <div className="border-top mt-4 border-secondary d-sm-flex justify-content-between text-start" dir="rtl">
-                <div className="pt-3">
+                <div className="pt-3 text-end">
                     <Link className="text-white opacity-75 text-decoration-none px-2" to={""} alt="">عن الموقع</Link>
                     <Link className="text-white opacity-75 text-decoration-none px-2" to={"/register"} alt=""> التسجيل </Link>
                     <Link className="text-white opacity-75 text-decoration-none px-2" to={"/login"} alt=""> دخول </Link>
                 </div>
-                <p className="text-white pt-3 opacity-75">جميع الحقوق محفوظة @ Learn with me {new Date().getFullYear()}</p>
+                <p className="text-white pt-3 opacity-75 text-end">جميع الحقوق محفوظة @ Learn with me {new Date().getFullYear()}</p>
             </div>
         </div>
       </div>
