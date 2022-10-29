@@ -24,7 +24,7 @@ const SwiperEffect = () => {
   return (
     <div className="container">
       <h2 className="textPrimLight text-center pt-5 pb-4 fw-bold">
-        Use Manassa for…
+        Use Learn with me for…
       </h2>
       <Swiper
         data-aos='fade-up' data-aos-delay='200' data-aos-duration='2000'
@@ -59,10 +59,10 @@ const SwiperEffect = () => {
               <div className="col-md-8 pt-4">
                 <img src={moueImage} className="img-fluid" />
                 <h4 className="textPrim fw-bold pb-2 pt-3">
-                  Appointment Booking
+                  Exame test
                 </h4>
                 <p>
-                  Get your next appointment scheduled with a click of a button.
+                  Get your next Exame with a click of a button.
                   Just share your booking link or have it embedded on your
                   website with your desired availability. It’s that simple.
                 </p>
@@ -83,11 +83,11 @@ const SwiperEffect = () => {
               <div className="col-md-8 pt-4">
                 <img src={asyncImage} className="img-fluid" />
                 <h4 className="textPrim fw-bold pb-2 pt-3">
-                  Recurring Appointments
+                  Teaching assistant
                 </h4>
                 <p>
-                  Say goodbye to one-time appointments only. Allow your clients
-                  to book a package of sessions or weekly appointments all at
+                  Say goodbye to one-time Teacher only. Allow your students
+                  to book a package of sessions any time all at
                   once. You can easily create recurring sessions with this handy
                   feature.
                 </p>

@@ -1,8 +1,9 @@
 import React from 'react'
 import { Container , Row , Col, CardText } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import logoImage from "assets/images/favicon.ico"
+import logoImage from "assets/images/logo2.png"
 import image1 from "assets/images/megamenu-img.png"
+import image4 from "assets/images/image4.jpg"
 import icon from "assets/images/icon.png";
 import icon2 from "assets/images/icon2.png";
 import icon3 from "assets/images/icon3.png";
@@ -15,20 +16,18 @@ import SwiperEffect from './SwiperEffect';
 const Home = () => {
   return (
     <div className="website">
-      <div className="bgLanding pb-4">
+      <div className="bgLanding">
         <Container fluid>
           <div className="d-flex justify-content-between py-3 px-md-5">
-            <div className="pt-3">
+            <div className="pt-0">
               <Link to="#" className="textBlack font-size-20">
                 <img
                   src={logoImage}
-                  className="me-2"
-                  width="50px"
+                  className="me-2 img-fluid"
                   data-aos="fade-up"
                   data-aos-delay="200"
                   data-aos-duration="2000"
                 />
-                <span className="text-uppercase">Manassa</span>
               </Link>
             </div>
             <div className="pt-3 d-sm-flex d-block">
@@ -55,7 +54,7 @@ const Home = () => {
                 data-aos-duration="2000"
               >
                 <h1 className="textPrim display-5 pt-lg-5 fw-bold">
-                  However you teach, <br /> it’s in Manassa
+                  However you teach, <br /> it’s in Learn with me
                 </h1>
                 <h4 className="py-3">
                 Real-time insights into student understanding through interactive lessons, interactive videos, gamification, and activities — all in a single platform.
@@ -83,7 +82,7 @@ const Home = () => {
         </div>
         <div className="bgPrimary py-5">
           <Container>
-            <CardText tag="h2" className="text-white text-center fw-bold">What makes Bon Appointito different?</CardText>
+            <CardText tag="h2" className="text-white text-center fw-bold">What makes Learn with me different?</CardText>
             <Row className="pt-4">
               <Col md="4" sm="6" className="pb-4">
                 <div className="cardFeature" data-aos='fade-up' data-aos-delay='100' data-aos-duration='1000'>
@@ -102,8 +101,8 @@ const Home = () => {
               <Col md="4" sm="6" className="pb-4">
                 <div className="cardFeature" data-aos='fade-up' data-aos-delay='200' data-aos-duration='2000'>
                   <img src={icon3} className="imageIcon" />
-                  <CardText tag="h4" className="textPrim fw-bold py-2">Manage Clients</CardText>
-                  <CardText tag="p" className="font-size-14">Keep track of your clients, manage appointment history, and more with the client dashboard.</CardText>
+                  <CardText tag="h4" className="textPrim fw-bold py-2">Manage Students</CardText>
+                  <CardText tag="p" className="font-size-14">Keep track of your Students, manage appointment history, and more with dashboard.</CardText>
                 </div>
               </Col>
               <Col md="4" sm="6" className="pb-4">
@@ -129,6 +128,81 @@ const Home = () => {
               </Col>
             </Row>
           </Container>
+        </div>
+        <div className='bg-white py-5'>
+          <Container>
+            <h2 className='textPrim text-center'>Visualize and support student understanding</h2>
+            <Row className='justify-content-between pt-5'>
+              <Col lg="5">
+                <img src={image4} className="img-fluid" data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="2000" />
+              </Col>
+              <Col lg="6">
+                <div data-aos="fade-left"
+                data-aos-delay="200"
+                data-aos-duration="2000">
+                  <ul className='ps-lg-0'>
+                    <li className='pb-3'>
+                      <CardText tag="p" className='font-size-18'>
+                        Use insights from 20+ formative assessment and dynamic media features to guide your teaching and improve student outcomes
+                      </CardText>
+                    </li>
+                    <li className='pb-3'>
+                      <CardText tag="p" className='font-size-18'>                   
+                        Adapt instruction or address misconceptions on-the-fly
+                      </CardText>
+                    </li>
+                    <li className='pb-3'>
+                      <CardText tag="p" className='font-size-18'>                   
+                        Differentiate, enrich, or provide extra support to meet students where they’re at from wherever they are learning (physical classroom, remote, hybrid)
+                      </CardText>
+                    </li>
+                  </ul>
+                  <Link to="/register">
+                    <button className="height56 btnGetStarted px-5 border-0 fw-bold">
+                      Start For Free
+                    </button>
+                  </Link>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </div>
+      {/* Footer */}
+      <div className="footerHome p-4">
+        <div className="container pt-4">
+            <div className="row justify-content-between">
+                <div className="col-lg-6">
+                    <img src={logoImage} alt="" data-aos="fade-right"
+                      data-aos-delay="200"
+                      data-aos-duration="2000" />
+                    <p className="text-muted pt-4">Refersion helps merchants connect with customers at scale through affiliate and influencer marketing program custom commission structures for e-commerce brands.</p>
+                </div>
+                <div className="col-lg-3">
+                    <p className="text-muted">Connect with us</p>
+                    <p>
+                      <Link className="text-white text-decoration-none px-2" to={""} alt="">
+                          <i className="fab fa-facebook fa-lg"></i>
+                      </Link>
+                      <Link className="text-white text-decoration-none px-2" to={""} alt="">
+                          <i className="fab fa-instagram fa-lg"></i>
+                      </Link>
+                      <Link className="text-white text-decoration-none px-2" to={""} alt="">
+                          <i className="fab fa-twitter fa-lg"></i>
+                      </Link>
+                    </p>
+                </div>
+            </div>
+            <div className="border-top mt-4 border-secondary d-sm-flex justify-content-between text-start" dir="rtl">
+                <div className="pt-3">
+                    <Link className="text-white opacity-75 text-decoration-none px-2" to={""} alt="">How it works</Link>
+                    <Link className="text-white opacity-75 text-decoration-none px-2" to={""} alt="">Contact</Link>
+                    <Link className="text-white opacity-75 text-decoration-none px-2" to={""} alt="">Legal</Link>
+                </div>
+                <p className="text-white pt-3 opacity-75">Learn with me {new Date().getFullYear()}, All rights reserved</p>
+            </div>
         </div>
       </div>
     </div>
