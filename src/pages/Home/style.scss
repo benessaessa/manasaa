@@ -21,3 +21,9 @@
 .imgFlip{
     transform:scaleX(-1) !important;
 }
+@media screen and (max-width:550px){
+    .logoFrist{
+        height: 65px !important;
+        margin-top: 1rem;
+    }
+}

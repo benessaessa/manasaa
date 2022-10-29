@@ -23,7 +23,7 @@ const Home = () => {
               <Link to="#" className="textBlack font-size-20">
                 <img
                   src={logoImage}
-                  className="me-2 img-fluid"
+                  className="me-2 img-fluid logoFrist"
                   data-aos="fade-up"
                   data-aos-delay="200"
                   data-aos-duration="2000"
@@ -44,10 +44,10 @@ const Home = () => {
             </div>
           </div>
         </Container>
-        <Container>
+        <Container className='pb-4'>
           <Row className="ps-md-5 justify-content-between">
             <Col lg="5">
-              <div className='pt-lg-5'>
+              <div className='pt-lg-4 pt-4'>
                 <img
                   src={image1}
                   data-aos="fade-up"
@@ -59,7 +59,7 @@ const Home = () => {
             </Col>
             <Col lg="6">
               <div
-                className="pt-lg-5 text-end"
+                className="pt-lg-4 text-end"
                 data-aos="fade-up"
                 data-aos-delay="200"
                 data-aos-duration="2000"
