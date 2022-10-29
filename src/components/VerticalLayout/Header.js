@@ -12,9 +12,9 @@ import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown"
 import NotificationDropdown from "../CommonForBoth/TopbarDropdown/NotificationDropdown"
 import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
 
-import logo from "../../assets/images/logo.svg"
+import logo from "assets/images/logo.png"
 import logoLightPng from "../../assets/images/logo-sm-light.png"
-import logoLightSvg from "../../assets/images/logo-light.svg"
+import logoLightSvg from "../../assets/images/logo.png"
 import logoDark from "../../assets/images/logo-dark.png"
 
 // import images
@@ -82,17 +82,16 @@ const Header = props => {
                   <img src={logo} alt="" height="22" />
                 </span>
                 <span className="logo-lg">
-                  <img src={logoDark} alt="" height="17" />
+                  <img src={logo} alt="" height="17" />
                 </span>
               </Link>
 
               <Link to="/" className="logo logo-light">
                 <span className="logo-sm">
-                  <img src={logoLightSvg} alt="" height="22" />
+                  <img src={logo} alt="" height="22" />
                 </span>
                 <span className="logo-lg">
-                  <img src={logoLightPng} alt="" height="35" />
-                  <span className='text-white ps-2 font-size-18'>Manassa</span>
+                  <img src={logo} alt="" height="60" />
                 </span>
               </Link>
             </div>

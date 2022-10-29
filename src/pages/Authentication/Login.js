@@ -16,7 +16,7 @@ import { loginUser, apiError, socialLogin } from "../../store/actions"
 
 // import images
 import profile from "assets/images/profile-img.png"
-import logo from "assets/images/logo.svg"
+import logo from "assets/images/logo.png"
 
 const Login = props => {
   // handleValidSubmit
@@ -44,13 +44,13 @@ const Login = props => {
               <Card className="overflow-hidden">
                 <div className="bg-primary bg-soft">
                   <Row>
-                    <Col xs={7}>
+                    <Col xs={8}>
                       <div className="text-primary p-4">
                         <h5 className="text-primary">Welcome Back !</h5>
-                        <p>Sign in to continue to Manasaa.</p>
+                        <p>Sign in to continue to Learn with me.</p>
                       </div>
                     </Col>
-                    <Col className="col-5 align-self-end">
+                    <Col className="col-4 align-self-end">
                       <img src={profile} alt="" className="img-fluid" />
                     </Col>
                   </Row>
