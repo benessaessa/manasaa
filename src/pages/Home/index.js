@@ -33,12 +33,12 @@ const Home = () => {
             <div className="pt-3 d-sm-flex d-block">
               <Link to="/register">
                 <button className="btn d-none d-sm-block height56 me-4 btn-outline-primary fw-bold px-5">
-                  Start For Free
+                  سجل الآن مجانا
                 </button>
               </Link>
               <Link to="/login">
                 <button className="height56 btnGetStarted px-5 border-0 fw-bold">
-                  Log in
+                  دخول
                 </button>
               </Link>
             </div>
@@ -46,24 +46,6 @@ const Home = () => {
         </Container>
         <Container>
           <Row className="ps-md-5 justify-content-between">
-            <Col lg="6">
-              <div
-                className="pt-lg-5"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                data-aos-duration="2000"
-              >
-                <h1 className="textPrim display-5 pt-lg-5 fw-bold">
-                  However you teach, <br /> it’s in Learn with me
-                </h1>
-                <h4 className="py-3">
-                Real-time insights into student understanding through interactive lessons, interactive videos, gamification, and activities — all in a single platform.
-                </h4>
-                <button className="btn height56 btnGetStarted px-5 mt-4 mb-5">
-                  Start For Free
-                </button>
-              </div>
-            </Col>
             <Col lg="5">
               <div className='pt-lg-5'>
                 <img
@@ -71,8 +53,27 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="100"
                   data-aos-duration="1000"
-                  className="img-fluid"
+                  className="img-fluid imgFlip"
                 />
+              </div>
+            </Col>
+            <Col lg="6">
+              <div
+                className="pt-lg-5 text-end"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="2000"
+              >
+                <h1 className="textPrim display-5 pt-lg-5 fw-bold">
+                   ! كيف تدرس 
+                   <br /> it’s in Learn with me
+                </h1>
+                <h4 className="py-3">
+                رؤى في الوقت الفعلي لفهم الطلاب من خلال الدروس التفاعلية ومقاطع الفيديو التفاعلية واللعبة والأنشطة - كل ذلك في نظام أساسي واحد.
+                </h4>
+                <button className="btn height56 btnGetStarted font-size-16 px-5 mt-4 mb-5">
+                  يمكنك البدء مجانا
+                </button>
               </div>
             </Col>
           </Row>
@@ -80,9 +81,9 @@ const Home = () => {
         <div className='bg-white'>
           <SwiperEffect />
         </div>
-        <div className="bgPrimary py-5">
+        <div className="bgPrimary py-5" dir='rtl'>
           <Container>
-            <CardText tag="h2" className="text-white text-center fw-bold">What makes Learn with me different?</CardText>
+            <CardText tag="h2" className="text-white text-center fw-bold">ما الذي يجعل Learn With me مختلف ؟</CardText>
             <Row className="pt-4">
               <Col md="4" sm="6" className="pb-4">
                 <div className="cardFeature" data-aos='fade-up' data-aos-delay='100' data-aos-duration='1000'>
@@ -130,8 +131,8 @@ const Home = () => {
           </Container>
         </div>
         <div className='bg-white py-5'>
-          <Container>
-            <h2 className='textPrim text-center'>Visualize and support student understanding</h2>
+          <Container className='overflow-hidden'>
+            <h2 className='textPrim text-center'>تصور ودعم فهم الطالب</h2>
             <Row className='justify-content-between pt-5'>
               <Col lg="5">
                 <img src={image4} className="img-fluid" data-aos="fade-right"
@@ -139,29 +140,29 @@ const Home = () => {
                 data-aos-duration="2000" />
               </Col>
               <Col lg="6">
-                <div data-aos="fade-left"
+                <div data-aos="fade-left" dir='rtl'
                 data-aos-delay="200"
                 data-aos-duration="2000">
-                  <ul className='ps-lg-0'>
+                  <ul className='pe-lg-0'>
                     <li className='pb-3'>
                       <CardText tag="p" className='font-size-18'>
-                        Use insights from 20+ formative assessment and dynamic media features to guide your teaching and improve student outcomes
+                      استخدم الرؤى من أكثر من 20 تقييمًا تكوينيًا وميزات وسائط ديناميكية لتوجيه التدريس وتحسين نتائج الطلاب
+                      </CardText>
+                    </li>
+                    <li className='pb-3'>
+                      <CardText tag="p" className='font-size-18'>                                         
+                        تكييف التعليمات أو معالجة المفاهيم الخاطئة بسرعة
                       </CardText>
                     </li>
                     <li className='pb-3'>
                       <CardText tag="p" className='font-size-18'>                   
-                        Adapt instruction or address misconceptions on-the-fly
-                      </CardText>
-                    </li>
-                    <li className='pb-3'>
-                      <CardText tag="p" className='font-size-18'>                   
-                        Differentiate, enrich, or provide extra support to meet students where they’re at from wherever they are learning (physical classroom, remote, hybrid)
+                      التفرقة بين الطلاب أو إثرائهم أو تقديم دعم إضافي لمقابلة الطلاب في المكان الذي يتواجدون فيه ومن أي مكان يتعلمون فيه (الفصل الدراسي المادي ، أو عن بُعد ، أو المختلط)
                       </CardText>
                     </li>
                   </ul>
                   <Link to="/register">
                     <button className="height56 btnGetStarted px-5 border-0 fw-bold">
-                      Start For Free
+                      إبدأ الآن مجانا
                     </button>
                   </Link>
                 </div>
@@ -171,16 +172,18 @@ const Home = () => {
         </div>
       </div>
       {/* Footer */}
-      <div className="footerHome p-4">
+      <div className="footerHome p-4" dir='rtl'>
         <div className="container pt-4">
             <div className="row justify-content-between">
                 <div className="col-lg-6">
-                    <img src={logoImage} alt="" data-aos="fade-right"
+                    <img src={logoImage} alt="" data-aos="fade-left"
                       data-aos-delay="200"
                       data-aos-duration="2000" />
-                    <p className="text-muted pt-4">Refersion helps merchants connect with customers at scale through affiliate and influencer marketing program custom commission structures for e-commerce brands.</p>
+                    <p className="text-white opacity-75 pt-4">
+                    يساعد Learn with me الطلاب على التواصل مع المدرس على نطاق واسع من خلال هياكل العمولات المخصصة لبرنامج التسويق عبر الشركاء التابعين والمؤثرين لعلامات التجارة الإلكترونية.
+                    </p>
                 </div>
-                <div className="col-lg-3">
+                <div className="col-lg-3 text-start">
                     <p className="text-muted">Connect with us</p>
                     <p>
                       <Link className="text-white text-decoration-none px-2" to={""} alt="">
@@ -197,11 +200,11 @@ const Home = () => {
             </div>
             <div className="border-top mt-4 border-secondary d-sm-flex justify-content-between text-start" dir="rtl">
                 <div className="pt-3">
-                    <Link className="text-white opacity-75 text-decoration-none px-2" to={""} alt="">How it works</Link>
-                    <Link className="text-white opacity-75 text-decoration-none px-2" to={""} alt="">Contact</Link>
-                    <Link className="text-white opacity-75 text-decoration-none px-2" to={""} alt="">Legal</Link>
+                    <Link className="text-white opacity-75 text-decoration-none px-2" to={""} alt="">عن الموقع</Link>
+                    <Link className="text-white opacity-75 text-decoration-none px-2" to={"/register"} alt=""> التسجيل </Link>
+                    <Link className="text-white opacity-75 text-decoration-none px-2" to={"/login"} alt=""> دخول </Link>
                 </div>
-                <p className="text-white pt-3 opacity-75">Learn with me {new Date().getFullYear()}, All rights reserved</p>
+                <p className="text-white pt-3 opacity-75">جميع الحقوق محفوظة @ Learn with me {new Date().getFullYear()}</p>
             </div>
         </div>
       </div>

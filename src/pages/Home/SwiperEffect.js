@@ -22,9 +22,9 @@ import { EffectCoverflow, Pagination } from "swiper";
 const SwiperEffect = () => {
   SwiperCore.use([Autoplay]);
   return (
-    <div className="container">
+    <div className="container" dir="rtl">
       <h2 className="textPrimLight text-center pt-5 pb-4 fw-bold">
-        Use Learn with me for…
+        يمكنك إستخدام Learn with me في ....
       </h2>
       <Swiper
         data-aos='fade-up' data-aos-delay='200' data-aos-duration='2000'
@@ -59,12 +59,12 @@ const SwiperEffect = () => {
               <div className="col-md-8 pt-4">
                 <img src={moueImage} className="img-fluid" />
                 <h4 className="textPrim fw-bold pb-2 pt-3">
-                  Exame test
+                  إختبار الطالب
                 </h4>
                 <p>
-                  Get your next Exame with a click of a button.
-                  Just share your booking link or have it embedded on your
-                  website with your desired availability. It’s that simple.
+                احصل على الاختبار التالي بنقرة زر واحدة.
+                  ما عليك سوى مشاركة رابط الحجز الخاص بك أو تضمينه في
+                  موقع الويب مع التوافر المطلوب. بكل بساطة.
                 </p>
                 <p className="textPrim">Start my free trial <i className="fa fa-arrow-right ps-2 font-size-14"></i></p>
               </div>

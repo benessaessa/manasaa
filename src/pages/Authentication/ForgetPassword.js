@@ -12,7 +12,7 @@ import { AvForm, AvField } from "availity-reactstrap-validation"
 
 // action
 import { userForgetPassword } from "../../store/actions"
-
+import "./style.scss"
 // import images
 import profile from "../../assets/images/profile-img.png"
 import logo from "../../assets/images/logo.png"
@@ -25,7 +25,7 @@ const ForgetPasswordPage = props => {
   return (
     <React.Fragment>
      <MetaTags>
-          <title>Forget Password | Skote - Responsive Bootstrap 5 Admin Dashboard</title>
+          <title>نسيت كلمة المرور</title>
         </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -41,8 +41,8 @@ const ForgetPasswordPage = props => {
                   <Row>
                     <Col xs={7}>
                       <div className="text-primary p-4">
-                        <h5 className="text-primary">Welcome Back !</h5>
-                        <p>Forgot your password!</p>
+                        <h5 className="text-primary">مرحبا بعودتك ! </h5>
+                        <p>نسيت كلمة المرور !</p>
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
@@ -84,9 +84,9 @@ const ForgetPasswordPage = props => {
                       <div className="mb-3">
                         <AvField
                           name="email"
-                          label="Email"
+                          label="البريد الإلكتروني"
                           className="form-control"
-                          placeholder="Enter email"
+                          placeholder="أدخل البريد الإلكتروني"
                           type="email"
                           required
                         />
@@ -97,7 +97,7 @@ const ForgetPasswordPage = props => {
                             className="btn btn-primary w-md waves-effect waves-light"
                             type="submit"
                           >
-                            Reset
+                            إعادة تعيين
                           </button>
                         </Col>
                       </Row>
@@ -107,9 +107,9 @@ const ForgetPasswordPage = props => {
               </Card>
               <div className="mt-5 text-center">
                 <p>
-                  Go back to{" "}
+                  الرجوع للخلف !{" "}
                   <Link to="login" className="font-weight-medium text-primary">
-                    Login
+                    دخول
                   </Link>{" "}
                 </p>
               </div>

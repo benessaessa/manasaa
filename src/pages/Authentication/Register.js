@@ -16,6 +16,7 @@ import { Link } from "react-router-dom"
 // import images
 import profileImg from "../../assets/images/profile-img.png"
 import logoImg from "../../assets/images/logo.png"
+import "./style.scss"
 
 const Register = props => {
   // handleValidSubmit
@@ -30,7 +31,7 @@ const Register = props => {
   return (
     <React.Fragment>
      <MetaTags>
-          <title>Register | Skote - Responsive Bootstrap 5 Admin Dashboard</title>
+          <title>التسجيل</title>
         </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -46,7 +47,7 @@ const Register = props => {
                   <Row>
                     <Col className="col-7">
                       <div className="text-primary p-4">
-                        <h5 className="text-primary">Free Register</h5>
+                        <h5 className="text-primary">تسجيل مجاني</h5>
                         <p>Get your free account</p>
                       </div>
                     </Col>
@@ -79,7 +80,7 @@ const Register = props => {
                     >
                       {props.user && props.user ? (
                         <Alert color="success">
-                          Register User Successfully
+                          تم التسجيل بنجاح
                         </Alert>
                       ) : null}
             
@@ -93,10 +94,10 @@ const Register = props => {
                       <div className="mb-3">
                         <AvField
                           name="username"
-                          label="Username"
+                          label="اسم المستخدم"
                           type="text"
                           required
-                          placeholder="Enter username"
+                          placeholder="اسم المستخدم"
                         />
                       </div>
 
@@ -104,9 +105,9 @@ const Register = props => {
                         <AvField
                           id="email"
                           name="email"
-                          label="Email"
-                          className="form-control"
-                          placeholder="Enter email"
+                          label="البريد الإلكتروني"
+                          className="form-control text-end"
+                          placeholder="البريد الإلكتروني"
                           type="email"
                           required
                         />
@@ -115,19 +116,19 @@ const Register = props => {
                       <div className="mb-3">
                         <AvField
                           name="code"
-                          label="Code"
+                          label="الكود"
                           type="text"
                           required
-                          placeholder="Enter username"
+                          placeholder="الكود"
                         />
                       </div>
                       <div className="mb-3">
                         <AvField
                           name="password"
-                          label="Password"
+                          label="الرقم السري"
                           type="password"
                           required
-                          placeholder="Enter Password"
+                          placeholder="من فضلك قم بإدخال الرقم السري"
                         />
                       </div>
 
@@ -136,7 +137,7 @@ const Register = props => {
                           className="btn btn-primary btn-block waves-effect waves-light"
                           type="submit"
                         >
-                          Register
+                          تسجيل
                         </button>
                       </div>
 
@@ -154,10 +155,10 @@ const Register = props => {
               </Card>
               <div className="mt-2 text-center">
                 <p>
-                  Already have an account ?{" "}
+                  لديك حساب بالفعل؟{" "}
                   <Link to="/login" className="font-weight-medium text-primary">
                     {" "}
-                    Login
+                    تسجيل الدخول
                   </Link>{" "}
                 </p>
               </div>

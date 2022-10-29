@@ -17,6 +17,7 @@ import { loginUser, apiError, socialLogin } from "../../store/actions"
 // import images
 import profile from "assets/images/profile-img.png"
 import logo from "assets/images/logo.png"
+import "./style.scss"
 
 const Login = props => {
   // handleValidSubmit
@@ -30,7 +31,7 @@ const Login = props => {
   return (
     <React.Fragment>
      <MetaTags>
-          <title>Login | Skote - Responsive Bootstrap 5 Admin Dashboard</title>
+          <title>تسجيل الدخول</title>
         </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -46,8 +47,8 @@ const Login = props => {
                   <Row>
                     <Col xs={8}>
                       <div className="text-primary p-4">
-                        <h5 className="text-primary">Welcome Back !</h5>
-                        <p>Sign in to continue to Learn with me.</p>
+                        <h5 className="text-primary">مرحبا بعودتك !</h5>
+                        <p>قم بتسجيل الدخول إلي منصة Learn with me.</p>
                       </div>
                     </Col>
                     <Col className="col-4 align-self-end">
@@ -84,7 +85,7 @@ const Login = props => {
                       <div className="mb-3">
                         <AvField
                           name="email"
-                          label="Email"
+                          label="البريد الإلكتروني"
                           value="admin@themesbrand.com"
                           className="form-control"
                           placeholder="Enter email"
@@ -96,41 +97,43 @@ const Login = props => {
                       <div className="mb-3">
                         <AvField
                           name="password"
-                          label="Password"
+                          label="الرقم السري"
                           value="123456"
                           type="password"
                           required
                           placeholder="Enter Password"
                         />
                       </div>
-
-                      <div className="form-check">
-                        <input
-                          type="checkbox"
-                          className="form-check-input"
-                          id="customControlInline"
-                        />
-                        <label
-                          className="form-check-label"
-                          htmlFor="customControlInline"
-                        >
-                          Remember me
-                        </label>
+                      <div>
+                        <div className="form-check d-block text-end">
+                          <label
+                            className="form-check-label pe-3"
+                            htmlFor="customControlInline"
+                          >
+                            تذكرني
+                          </label>
+                          <input
+                            type="checkbox"
+                            className="form-check-input float-end"
+                            id="customControlInline"
+                          />
+                        </div>
                       </div>
-
-                      <div className="mt-3 d-grid">
-                        <button
-                          className="btn btn-primary btn-block waves-effect waves-light"
-                          type="submit"
-                        >
-                          Log In
-                        </button>
+                      <div>
+                        <div className="mt-3 d-grid">
+                          <button
+                            className="btn btn-primary btn-block waves-effect waves-light"
+                            type="submit"
+                          >
+                            دخول
+                          </button>
+                        </div>
                       </div>
 
                       <div className="mt-4 text-center">
                         <Link to="/forgot-password" className="text-muted">
                           <i className="mdi mdi-lock me-1" />
-                          Forgot your password?
+                          نسيت كلمة المرور ؟
                         </Link>
                       </div>
                     </AvForm>
@@ -139,13 +142,13 @@ const Login = props => {
               </Card>
               <div className="mt-2 text-center">
                 <p>
-                  Don&#39;t have an account ?{" "}
+                  ليس لديك حساب ؟{" "}
                   <Link
                     to="register"
                     className="fw-medium text-primary"
                   >
                     {" "}
-                    Register now{" "}
+                    سجل الآن{" "}
                   </Link>{" "}
                 </p>
               </div>

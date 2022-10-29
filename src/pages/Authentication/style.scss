@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "cairo";
+    src : url(../../assets/fonts/Cairo-Regular.ttf);
+}
+body,h1,h2,h3,h4,h5,h6,p,li,a,link,input,label,button{
+    font-family: "cairo" !important;
+}
+.account-pages{
+    direction: rtl;
+}
