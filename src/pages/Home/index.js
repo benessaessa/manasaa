@@ -80,10 +80,10 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
-        <div className='bg-white'>
+        <div className='bg-white px-2'>
           <SwiperEffect />
         </div>
-        <div className="bgPrimary py-5" dir='rtl'>
+        <div className="bgPrimary py-5 px-2" dir='rtl'>
           <Container>
             <CardText tag="h2" className="text-white text-center fw-bold">ما الذي يجعل Learn With me مختلف ؟</CardText>
             <Row className="pt-4">
@@ -132,17 +132,17 @@ const Home = () => {
             </Row>
           </Container>
         </div>
-        <div className='bg-white py-5'>
+        <div className='bg-white py-5 px-2'>
           <Container className='overflow-hidden'>
             <h2 className='textPrim text-center'>تصور ودعم فهم الطالب</h2>
             <Row className='justify-content-between pt-5'>
               <Col lg="5">
-                <img src={image4} className="img-fluid mb-4" data-aos="fade-right"
+                <img src={image4} className="img-fluid mb-4" data-aos="fadeIn"
                 data-aos-delay="200"
                 data-aos-duration="2000" />
               </Col>
               <Col lg="6">
-                <div data-aos="fade-left" dir='rtl'
+                <div data-aos="fadeIn" dir='rtl'
                 className='px-2'
                 data-aos-delay="200"
                 data-aos-duration="2000">
@@ -182,13 +182,13 @@ const Home = () => {
                     <img src={logoImage} alt="" data-aos="fade-left"
                       data-aos-delay="200"
                       data-aos-duration="2000" />
-                    <p className="text-white opacity-75 pt-4">
+                    <p className="text-white opacity-75 pt-4 px-2">
                     يساعد Learn with me الطلاب على التواصل مع المدرس على نطاق واسع من خلال هياكل العمولات المخصصة لبرنامج التسويق عبر الشركاء التابعين والمؤثرين لعلامات التجارة الإلكترونية.
                     </p>
                 </div>
                 <div className="col-lg-3 text-end px-3">
-                    <p className="text-white opacity-75">يمكنك التواصل معنا</p>
-                    <p>
+                    <p className="text-white opacity-75 px-2">يمكنك التواصل معنا</p>
+                    <p className='px-2'>
                       <Link className="text-white text-decoration-none px-2" to={""} alt="">
                           <i className="fab fa-facebook fa-lg"></i>
                       </Link>
@@ -201,13 +201,13 @@ const Home = () => {
                     </p>
                 </div>
             </div>
-            <div className="border-top mt-4 border-secondary d-sm-flex justify-content-between text-start" dir="rtl">
+            <div className="border-top mt-4 px-2 border-secondary d-sm-flex justify-content-between text-start" dir="rtl">
                 <div className="pt-3 text-end">
                     <Link className="text-white opacity-75 text-decoration-none px-2" to={""} alt="">عن الموقع</Link>
                     <Link className="text-white opacity-75 text-decoration-none px-2" to={"/register"} alt=""> التسجيل </Link>
                     <Link className="text-white opacity-75 text-decoration-none px-2" to={"/login"} alt=""> دخول </Link>
                 </div>
-                <p className="text-white pt-3 opacity-75 text-end">جميع الحقوق محفوظة @ Learn with me {new Date().getFullYear()}</p>
+                <p className="text-white pt-3 opacity-75 text-end px-2">جميع الحقوق محفوظة @ Learn with me {new Date().getFullYear()}</p>
             </div>
         </div>
       </div>
