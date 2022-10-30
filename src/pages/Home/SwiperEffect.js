@@ -83,7 +83,7 @@ const SwiperEffect = () => {
               <div className="col-md-8 pt-4">
                 <img src={asyncImage} className="img-fluid" />
                 <h4 className="textPrim fw-bold pb-2 pt-3">
-                  Teaching assistant
+                  Teacher assistant
                 </h4>
                 <p>
                   Say goodbye to one-time Teacher only. Allow your students

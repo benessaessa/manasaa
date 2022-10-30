@@ -59,7 +59,7 @@ const Home = () => {
             </Col>
             <Col lg="6">
               <div
-                className="pt-lg-4 text-end"
+                className="pt-lg-4 text-end px-2"
                 data-aos="fade-up"
                 data-aos-delay="200"
                 data-aos-duration="2000"
