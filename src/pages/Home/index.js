@@ -18,7 +18,7 @@ const Home = () => {
     <div className="website">
       <div className="bgLanding">
         <Container fluid>
-          <div className="d-flex justify-content-between py-3 px-md-5">
+          <div className="d-flex justify-content-between py-3 px-md-5 px-2">
             <div className="pt-0">
               <Link to="#" className="textBlack font-size-20">
                 <img
@@ -59,7 +59,7 @@ const Home = () => {
             </Col>
             <Col lg="6">
               <div
-                className="pt-lg-4 text-end px-2"
+                className="pt-lg-4 text-end px-3"
                 data-aos="fade-up"
                 data-aos-delay="200"
                 data-aos-duration="2000"
