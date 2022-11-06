@@ -8,9 +8,9 @@ import "swiper/modules/navigation/navigation.scss";
 import "swiper/modules/thumbs/thumbs.min.css";
 import "swiper/swiper-bundle.css";
 import asyncImage from "assets/images/icon5.png";
-import degreeImage from "assets/images/icon7.png";
+// import degreeImage from "assets/images/icon7.png";
 import calendarImage from "assets/images/icon6.png";
-import featureImage from "assets/images/feature.png";
+// import featureImage from "assets/images/feature.png";
 import featureImage2 from "assets/images/feature2.png";
 import featureImage3 from "assets/images/feature3.png";
 import featureImage4 from "assets/images/feature4.png";
@@ -52,21 +52,18 @@ const SwiperEffect = () => {
             <div className="row">
               <div className="col-md-4">
                 <img
-                  src={featureImage}
+                  src={featureImage3}
                   className="img-fluid d-none d-md-block"
                 />
               </div>
               <div className="col-md-8 pt-4">
                 <img src={moueImage} className="img-fluid" />
                 <h4 className="textPrim fw-bold pb-2 pt-3">
-                  إختبار الطالب
+                   الطالب
                 </h4>
                 <p>
-                احصل على الاختبار التالي بنقرة زر واحدة.
-                  ما عليك سوى مشاركة رابط الحجز الخاص بك أو تضمينه في
-                  موقع الويب مع التوافر المطلوب. بكل بساطة.
+                يمكنك استخدام learn with me في دراسة مقررات الكترونية تتعلق بكيفية إنتاج الكائنات الرقمية وذلك من خلال تحليل المعلومات الموجودة مسبقا عند الطالب والتقدم بالدراسة وفق مستوي الطلاب والتقدم وفق سرعتهم وادائهم كلا علي حدة
                 </p>
-                <p className="textPrim">Start my free trial <i className="fa fa-arrow-right ps-2 font-size-14"></i></p>
               </div>
             </div>
           </div>
@@ -86,22 +83,18 @@ const SwiperEffect = () => {
                   Teacher assistant
                 </h4>
                 <p>
-                  Say goodbye to one-time Teacher only. Allow your students
-                  to book a package of sessions any time all at
-                  once. You can easily create recurring sessions with this handy
-                  feature.
+                يساعدك هذا الاختيار في حالة عدم معرفتك اي جزء من أجزاء البرنامج
                 </p>
-                <p className="textPrim">Start my free trial <i className="fa fa-arrow-right ps-2 font-size-14"></i></p>
               </div>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="card py-4 px-3">
             <div className="row">
               <div className="col-md-4">
                 <img
-                  src={featureImage3}
+                  src={featureImage}
                   className="img-fluid d-none d-md-block"
                 />
               </div>
@@ -119,7 +112,7 @@ const SwiperEffect = () => {
               </div>
             </div>
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <div className="card py-4 px-3">
             <div className="row">
@@ -135,12 +128,14 @@ const SwiperEffect = () => {
                   Calendar Management
                 </h4>
                 <p>
-                  Want to view your upcoming bookings for the week, month, or
-                  year? Stay organized and on track with the calendar manager
-                  that allows you to filter events, reschedule, cancel
-                  appointments, and more.
+                   1 - من خلاله يتم تحديد مواعيد المقابلات بيت المدرب مع المتدربين او المتدربات 
                 </p>
-                <p className="textPrim">Start my free trial <i className="fa fa-arrow-right ps-2 font-size-14"></i></p>
+                <p>
+                   2 -  تحديد موعد تسليم الشيتات العملية المشاريع المنفذة عمليا
+                </p>
+                <p>
+                   3 -  تحديد موعد رفع المشاريع او الشيتات علي المنصة
+                </p>
               </div>
             </div>
           </div>
