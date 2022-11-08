@@ -61,7 +61,7 @@ const SwiperEffect = () => {
                 <h4 className="textPrim fw-bold pb-2 pt-3">
                    الطالب
                 </h4>
-                <p>
+                <p className="font-size-16">
                 يمكنك استخدام learn with me في دراسة مقررات الكترونية تتعلق بكيفية إنتاج الكائنات الرقمية وذلك من خلال تحليل المعلومات الموجودة مسبقا عند الطالب والتقدم بالدراسة وفق مستوي الطلاب والتقدم وفق سرعتهم وادائهم كلا علي حدة
                 </p>
               </div>
@@ -82,7 +82,7 @@ const SwiperEffect = () => {
                 <h4 className="textPrim fw-bold pb-2 pt-3">
                   Teacher assistant
                 </h4>
-                <p>
+                <p className="font-size-16">
                 يساعدك هذا الاختيار في حالة عدم معرفتك اي جزء من أجزاء البرنامج
                 </p>
               </div>
@@ -101,7 +101,7 @@ const SwiperEffect = () => {
               <div className="col-md-8 pt-4">
                 <img src={degreeImage} className="img-fluid" />
                 <h4 className="textPrim fw-bold pb-2 pt-3">Course Scheduler</h4>
-                <p>
+                <p className="font-size-16">
                   Say goodbye to one-time appointments only. Allow your clients
                   to book a package of sessions or weekly appointments all at
                   once. You can easily create recurring sessions with this handy
@@ -127,13 +127,13 @@ const SwiperEffect = () => {
                 <h4 className="textPrim fw-bold pb-2 pt-3">
                   Calendar Management
                 </h4>
-                <p>
+                <p className="font-size-16">
                    1 - من خلاله يتم تحديد مواعيد المقابلات بيت المدرب مع المتدربين او المتدربات 
                 </p>
-                <p>
+                <p className="font-size-16">
                    2 -  تحديد موعد تسليم الشيتات العملية المشاريع المنفذة عمليا
                 </p>
-                <p>
+                <p className="font-size-16">
                    3 -  تحديد موعد رفع المشاريع او الشيتات علي المنصة
                 </p>
               </div>
