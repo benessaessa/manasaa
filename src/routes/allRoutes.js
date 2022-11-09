@@ -24,13 +24,12 @@ const userRoutes = [
   { path : '/profile' , component : UserProfile},
   { path : '/edit-text' , component : EditText},
   { path : '/edit-voice' , component : EditVoice},
-
+  {path: "/home" , component:Home },
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/home" /> },
 ] 
 
 const authRoutes = [
-  {path: "/home" , component:Home },
   { path: "/logout", component: Logout },
   { path: "/login", component: Login },
   { path: "/forgot-password", component: ForgetPwd },

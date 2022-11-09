@@ -7,8 +7,11 @@
   direction: rtl;
   background-color: bisque;
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid white;
 }
-
+.accordion__section:last-child{
+  border-bottom: 0px;
+}
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: #F8F9FF;
