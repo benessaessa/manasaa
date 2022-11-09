@@ -14,14 +14,16 @@ import Register from "../pages/Authentication/Register"
 import ForgetPwd from "../pages/Authentication/ForgetPassword"
 
 // Dashboard
-import Dashboard from "../pages/Dashboard/index"
-import Items  from 'pages/Items/index'
+import Dashboard from "pages/Dashboard/index"
 import Home from "pages/Home"
+import EditText from 'pages/EditText/index';
+import EditVoice from 'pages/EditVoice/index';
 
 const userRoutes = [
   { path: "/dashboard", component: Dashboard },
   { path : '/profile' , component : UserProfile},
-  { path : '/items' , component : Items},
+  { path : '/edit-text' , component : EditText},
+  { path : '/edit-voice' , component : EditVoice},
 
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/home" /> },

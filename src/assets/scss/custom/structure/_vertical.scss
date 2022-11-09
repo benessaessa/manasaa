@@ -460,10 +460,13 @@ body[data-sidebar="dark"] {
     }
     .mm-active {
         color: $sidebar-dark-menu-item-active-color !important;
+        .mm-active {
+            color: white !important;
+        }
         > a{
-            color: $sidebar-dark-menu-item-active-color !important;
+            color: #79829c!important;
             i {
-                color: $sidebar-dark-menu-item-active-color !important;
+                color: #79829c!important;
             }
         }
         > i {

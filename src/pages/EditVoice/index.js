@@ -1,13 +1,13 @@
 import React from 'react'
 import { Container } from 'reactstrap';
 
-const Items = props => {
+const EditVoice = props => {
   return (
     <React.Fragment>
       <div className="page-content">
         <Container fluid>
 
-          <h3>Welcome to Items</h3>
+          <h3>Welcome to EditVoice</h3>
 
         </Container>
       </div>
@@ -15,4 +15,4 @@ const Items = props => {
   )
 }
 
-export default Items
+export default EditVoice

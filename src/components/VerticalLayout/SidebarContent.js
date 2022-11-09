@@ -96,13 +96,53 @@ const SidebarContent = props => {
             <li>
               <Link to="/dashboard" className="waves-effect">
                 <i className="bx bx-home-circle"></i>
-                <span>{props.t("Dashboard")}</span>
+                <span>الرئيسية</span>
               </Link>
+            </li>
+            <li>
+              <Link Link to='/#' className='has-arrow waves-effect'>
+                <i className='bx bxs-book'></i>
+                <span>المهارات</span>
+              </Link>
+              <ul className='sub-menu' aria-expanded='false'>
+                <li>
+                  <Link Link to={`/edit-text`}>
+                    <i className='bx bx-edit'></i>
+                    <span>تحرير النص</span>
+                  </Link>
+                  <Link to={`/edit-voice`}>
+                    <i className='fa fa-microphone'></i>
+                    <span>تحرير الصوت</span>
+                  </Link>
+                  <Link to={`/booking`}>
+                    <i className='bx bxs-image'></i>
+                    <span>تحرير صورة</span>
+                  </Link>
+                  <Link to={`/booking`}>
+                    <i className='bx bxs-video'></i>
+                    <span>انتاج فيديو</span>
+                  </Link>
+                  <Link to={`/booking`}>
+                    <i className='bx bx-book'></i>
+                    <span>عمل عرض تقديمي</span>
+                  </Link>
+                  <Link to={`/booking`}>
+                    <i className='bx bx-share'></i>
+                    <span>الحفظ والمشاركة</span>
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link to="/items" className="waves-effect">
                 <i className="bx bx-briefcase"></i>
-                <span>{props.t("Courses")}</span>
+                <span>النتائج</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/items" className="waves-effect">
+                <i className="fa fa-file-invoice"></i>
+                <span>التقارير</span>
               </Link>
             </li>
           </ul>
