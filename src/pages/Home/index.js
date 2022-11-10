@@ -12,6 +12,7 @@ import icon5 from "assets/images/icon5.png";
 import icon6 from "assets/images/icon6.png";
 import './style.scss'
 import SwiperEffect from './SwiperEffect';
+import ProfileMenu from 'components/CommonForBoth/TopbarDropdown/ProfileMenu';
 
 const Home = () => {
   return (
@@ -30,17 +31,18 @@ const Home = () => {
                 />
               </Link>
             </div>
-            <div className="pt-3 d-sm-flex d-block">
-              <Link to="/register">
+            <div className="pt-3 d-sm-flex d-block edit_profile">
+              <Link to="/dashboard">
                 <button className="btn d-none d-sm-block height56 me-4 btn-outline-primary fw-bold px-5">
-                  سجل الآن مجانا
+                  الدخول إلي لوحة التحكم
                 </button>
               </Link>
-              <Link to="/login">
+              <ProfileMenu />
+              {/* <Link to="/login">
                 <button className="height56 btnGetStarted px-5 border-0 fw-bold">
                   دخول
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </Container>
@@ -72,10 +74,15 @@ const Home = () => {
                 رؤى في الوقت الفعلي لفهم الطلاب من خلال الدروس التفاعلية ومقاطع الفيديو التفاعلية واللعبة والأنشطة - كل ذلك في نظام أساسي واحد.
                 </h4>
                 <Link to="/register">
-                  <button className="btn height56 btnGetStarted font-size-16 px-5 mt-4 mb-5">
+                  <button className="btn height56 btnGetStarted font-size-16 px-5 mt-4 mb-3 mb-sm-5">
                     يمكنك البدء مجانا
                   </button>
                 </Link>
+                <Link to="/dashboard">
+                <button className="btn d-sm-none height56 btn-outline-primary fw-bold px-5 ms-4">
+                  الدخول إلي لوحة التحكم
+                </button>
+              </Link>
               </div>
             </Col>
           </Row>

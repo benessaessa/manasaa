@@ -26,10 +26,10 @@ const userRoutes = [
   { path : '/edit-voice' , component : EditVoice},
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/home" /> },
+  {path: "/home" , component:Home },
 ] 
 
 const authRoutes = [
-  {path: "/home" , component:Home },
   { path: "/logout", component: Logout },
   { path: "/login", component: Login },
   { path: "/forgot-password", component: ForgetPwd },

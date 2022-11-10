@@ -8,14 +8,9 @@ import { Link } from "react-router-dom"
 // Reactstrap
 
 // Import menuDropdown
-import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown"
-import NotificationDropdown from "../CommonForBoth/TopbarDropdown/NotificationDropdown"
 import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
 
 import logo from "assets/images/logo.png"
-import logoLightPng from "../../assets/images/logo-sm-light.png"
-import logoLightSvg from "../../assets/images/logo.png"
-import logoDark from "../../assets/images/logo-dark.png"
 
 // import images
 

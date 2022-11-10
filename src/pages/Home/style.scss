@@ -21,6 +21,10 @@
 .imgFlip{
     transform:scaleX(-1) !important;
 }
+.edit_profile .header-item{
+    height: 55px;
+    background-color: white;
+}
 @media screen and (max-width:550px){
     .logoFrist{
         height: 65px !important;
