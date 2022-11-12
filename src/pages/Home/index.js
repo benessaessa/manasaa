@@ -10,6 +10,7 @@ import icon3 from "assets/images/icon3.png";
 import icon4 from "assets/images/icon4.png";
 import icon5 from "assets/images/icon5.png";
 import icon6 from "assets/images/icon6.png";
+import ChatBot from 'react-simple-chatbot';
 import './style.scss'
 import SwiperEffect from './SwiperEffect';
 import ProfileMenu from 'components/CommonForBoth/TopbarDropdown/ProfileMenu';
@@ -56,6 +57,71 @@ const Home = () => {
                   data-aos-delay="100"
                   data-aos-duration="1000"
                   className="img-fluid imgFlip"
+                />
+                <ChatBot
+                  floating={true}
+                  opened
+                  headerTitle="ChatBot"
+                  recognitionEnable={true}
+                  steps={[
+                    {
+                      id: '1',
+                      message: 'السلام عليكم ورحمة الله وبركاته',
+                      trigger: '2',
+                    },
+                    {
+                      id: '2',
+                      message: ' مرحبا بك في المنصة التعليمية الخاصة ب Learn With me من فضلك قم بالإجابة علي هذه الأسئلة',
+                      trigger: '3',
+                    },
+                    {
+                      id: '3',
+                      message: ' ما اسمك ',
+                      trigger: 'name',
+                    },
+                    {
+                      id: 'name',
+                      user:true,
+                      trigger: '5',
+                    },
+                    {
+                      id: '5',
+                      message: 'ما إسم كليتك ',
+                      trigger: 'faculty',
+                    },
+                    {
+                      id: 'faculty',
+                      user: true,
+                      trigger: '7',
+                    },
+                    {
+                      id: '7',
+                      message: 'في أي فرقة دراسية',
+                      trigger: 'options',
+                    },
+                    {
+                      id: 'options',
+                      user: true,
+                      trigger: '9',
+                    },
+                    {
+                      id: '9',
+                      message: 'هل يوجد مقررات تكنولوجيا قمت بدراستها خلال الأربع سنوات ؟',
+                      trigger: 'subject',
+                    },
+                    {
+                      id: 'subject',
+                      options: [
+                        { value: 'male', label: 'نعم', trigger: '11' },
+                        { value: 'female', label: 'لا', trigger: '11' },
+                      ],
+                    },
+                    {
+                      id: '11',
+                      message: 'شكرا علي إختياراتك',
+                      end:true,
+                    },
+                  ]}
                 />
               </div>
             </Col>
