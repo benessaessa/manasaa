@@ -130,14 +130,14 @@ const Home = () => {
                     {
                       id: 'subject',
                       options: [
-                        { value: 'male', label: 'نعم', trigger: '14' },
-                        { value: 'female', label: 'لا', trigger: '14' },
+                        { value: 'yes', label: 'نعم', trigger: '14' },
+                        { value: 'no', label: 'لا', trigger: '14' },
                       ],
                     },
                     {
                       id: '14',
                       message: 'شكرا علي إختياراتك',
-                      end:true,
+                      end:true
                     },
                   ]}
                 />
