@@ -61,7 +61,10 @@ const Home = () => {
                 <ChatBot
                   floating={true}
                   opened
-                  headerTitle="ChatBot"
+                  className="chatStyle"
+                  // speechSynthesis={{ enable: true, lang: 'ar' }}
+                  headerTitle="ChatBot Learn with Me "
+                  recognitionLang="ar"
                   recognitionEnable={true}
                   steps={[
                     {
@@ -86,38 +89,53 @@ const Home = () => {
                     },
                     {
                       id: '5',
+                      message: 'مرحبا {previousValue} نحن سعداء بوجودك',
+                      trigger: '6',
+                    },
+                    {
+                      id: '6',
                       message: 'ما إسم كليتك ',
                       trigger: 'faculty',
                     },
                     {
                       id: 'faculty',
                       user: true,
-                      trigger: '7',
+                      trigger: '8',
                     },
                     {
-                      id: '7',
+                      id: '8',
+                      message: 'يا الروعة انت متميز !',
+                      trigger: '9',
+                    },
+                    {
+                      id: '9',
                       message: 'في أي فرقة دراسية',
                       trigger: 'options',
                     },
                     {
                       id: 'options',
                       user: true,
-                      trigger: '9',
+                      trigger: '11',
                     },
                     {
-                      id: '9',
-                      message: 'هل يوجد مقررات تكنولوجيا قمت بدراستها خلال الأربع سنوات ؟',
+                      id: '11',
+                      message: 'أوووه ممتاز',
+                      trigger: '12',
+                    },
+                    {
+                      id: '12',
+                      message: '؟ هل قمت بدراسة مقررات تكنولوجية أثناء دراستك',
                       trigger: 'subject',
                     },
                     {
                       id: 'subject',
                       options: [
-                        { value: 'male', label: 'نعم', trigger: '11' },
-                        { value: 'female', label: 'لا', trigger: '11' },
+                        { value: 'male', label: 'نعم', trigger: '14' },
+                        { value: 'female', label: 'لا', trigger: '14' },
                       ],
                     },
                     {
-                      id: '11',
+                      id: '14',
                       message: 'شكرا علي إختياراتك',
                       end:true,
                     },
