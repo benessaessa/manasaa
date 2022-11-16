@@ -11,17 +11,17 @@ import logo from "../../assets/images/logo.png"
 import { API_BASE_URL_ENV } from "../../helpers/common";
 import http from "../../services/HttpService";
 import {toast} from "react-toastify";
-const forgetApiEndpoint = API_BASE_URL_ENV() + "/admin/user/forget-password";
+const forgetApiEndpoint = API_BASE_URL_ENV() + "/admin/user/reset-password";
 
-const ForgetPasswordPage = props => {
+const ResetPassword = props => {
   const [loading, setLoading] = useState(false)
 
   function handleValidSubmit(event, values) {
     setLoading(true)
     http.post(forgetApiEndpoint, values).then((res) => {
       if(res.status===200){ 
-        toast.success("Email sent successfully")
-        props.history.push(`/admin/reset-password`);
+        toast.success("Password reset successfully")
+        props.history.push(`/login`);
       }  
    }).catch((error) => {
     toast.error(error?.response?.data?.message)
@@ -90,12 +90,30 @@ const ForgetPasswordPage = props => {
                     >
                       <div className="mb-3">
                         <AvField
-                          name="email"
-                          label="البريد الإلكتروني"
+                          name="forget_password_code"
+                          label="الكود"
                           className="form-control"
-                          placeholder="أدخل البريد الإلكتروني"
-                          type="email"
+                          placeholder="أدخل الكود"
+                          type="number"
                           required
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <AvField
+                          name="password"
+                          label="الرقم السري"
+                          type="password"
+                          required
+                          placeholder="من فضلك قم بإدخال الرقم السري"
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <AvField
+                          name="password_confirmation"
+                          label="تاكيد الرقم السرى"
+                          type="password"
+                          required
+                          placeholder="من فضلك قم بإدخال  تاكيد الرقم السري"
                         />
                       </div>
                       <Row className="mb-3">
@@ -131,4 +149,4 @@ const ForgetPasswordPage = props => {
 
  
 
-export default ForgetPasswordPage 
+export default ResetPassword 

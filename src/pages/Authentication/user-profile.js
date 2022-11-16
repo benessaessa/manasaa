@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import MetaTags from 'react-meta-tags';
 import React, { useState, useEffect } from "react"
 import {
@@ -11,21 +10,11 @@ import {
   Media,
   Button,
 } from "reactstrap"
-
-// availity-reactstrap-validation
 import { AvForm, AvField } from "availity-reactstrap-validation"
-
-// Redux
-import { connect } from "react-redux"
-import { withRouter } from "react-router-dom"
-
-//Import Breadcrumb
 import Breadcrumb from "../../components/Common/Breadcrumb"
-
 import avatar from "../../assets/images/users/avatar-2.jpg"
-// actions
-import { editProfile, resetProfileFlag } from "../../store/actions"
 
+ 
 const UserProfile = props => {
   const [email, setemail] = useState("")
   const [name, setname] = useState("")
@@ -146,17 +135,9 @@ const UserProfile = props => {
   )
 }
 
-UserProfile.propTypes = {
-  editProfile: PropTypes.func,
-  error: PropTypes.any,
-  success: PropTypes.any
-}
+ 
 
-const mapStatetoProps = state => {
-  const { error, success } = state.Profile
-  return { error, success }
-}
+ 
 
-export default withRouter(
-  connect(mapStatetoProps, { editProfile, resetProfileFlag })(UserProfile)
-)
+export default UserProfile
+

@@ -1,32 +1,36 @@
-import PropTypes from "prop-types"
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import MetaTags from 'react-meta-tags';
 import { Row, Col, CardBody, Card, Alert, Container } from "reactstrap"
-
-// availity-reactstrap-validation
 import { AvForm, AvField } from "availity-reactstrap-validation"
-
-// action
-import { registerUser, apiError, registerUserFailed } from "../../store/actions"
-
-// Redux
-import { connect } from "react-redux"
 import { Link } from "react-router-dom"
-
-// import images
 import profileImg from "../../assets/images/profile-img.png"
 import logoImg from "../../assets/images/logo.png"
 import "./style.scss"
+import AuthService from "services/Admin/AuthService";
+import http from "../../services/HttpService";
+import { API_BASE_URL_ENV } from "../../helpers/common";
+import {toast} from "react-toastify";
+
+const regsiterApiEndpoint = API_BASE_URL_ENV() + "/admin/user/register";
 
 const Register = props => {
-  // handleValidSubmit
-  const handleValidSubmit = (event, values) => {
-    props.registerUser(values)
-  }
-
-  useEffect(() => {
-    props.apiError("")
-  }, []);
+  const [loading, setLoading] = useState(false)
+   const handleValidSubmit = (event, values) => {
+    setLoading(true)
+    http.post(regsiterApiEndpoint, values).then((res) => {
+      if(res.status===201){ 
+        toast.success("Account created successfully")
+        localStorage.setItem(
+          "authUser",
+          JSON.stringify({ ...res.data, user_type: "admin" }),
+        );
+        props.history.push(`/dashboard`);
+      }  
+   }).catch((error) => {
+    toast.error(error?.response?.data?.message)
+      setLoading(false)
+    })
+   };
 
   return (
     <React.Fragment>
@@ -93,7 +97,7 @@ const Register = props => {
 
                       <div className="mb-3">
                         <AvField
-                          name="username"
+                          name="name"
                           label="اسم المستخدم"
                           type="text"
                           required
@@ -112,16 +116,6 @@ const Register = props => {
                           required
                         />
                       </div>
-
-                      <div className="mb-3">
-                        <AvField
-                          name="code"
-                          label="الكود"
-                          type="text"
-                          required
-                          placeholder="الكود"
-                        />
-                      </div>
                       <div className="mb-3">
                         <AvField
                           name="password"
@@ -131,11 +125,21 @@ const Register = props => {
                           placeholder="من فضلك قم بإدخال الرقم السري"
                         />
                       </div>
+                      <div className="mb-3">
+                        <AvField
+                          name="password_confirmation"
+                          label="تاكيد الرقم السرى"
+                          type="password"
+                          required
+                          placeholder="من فضلك قم بإدخال  تاكيد الرقم السري"
+                        />
+                      </div>
 
                       <div className="mt-4">
                         <button
                           className="btn btn-primary btn-block waves-effect waves-light"
                           type="submit"
+                          disabled={loading}
                         >
                           تسجيل
                         </button>
@@ -169,21 +173,7 @@ const Register = props => {
     </React.Fragment>
   )
 }
+ 
+ 
 
-Register.propTypes = {
-  registerUser: PropTypes.func,
-  registerUserFailed: PropTypes.func,
-  registrationError: PropTypes.any,
-  user: PropTypes.any,
-}
-
-const mapStatetoProps = state => {
-  const { user, registrationError, loading } = state.Account
-  return { user, registrationError, loading }
-}
-
-export default connect(mapStatetoProps, {
-  registerUser,
-  apiError,
-  registerUserFailed,
-})(Register)
+export default Register

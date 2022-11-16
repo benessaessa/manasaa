@@ -1,38 +1,44 @@
-import PropTypes from 'prop-types'
 import MetaTags from 'react-meta-tags';
-import React from "react"
-
+import React ,{useState} from "react"
 import { Row, Col, CardBody, Card, Alert, Container } from "reactstrap"
-
-// Redux
-import { connect } from "react-redux"
-import { withRouter, Link } from "react-router-dom"
-
-// availity-reactstrap-validation
+import { Link } from "react-router-dom"
 import { AvForm, AvField } from "availity-reactstrap-validation"
-
-// actions
-import { loginUser, apiError, socialLogin } from "../../store/actions"
-
-// import images
 import profile from "assets/images/profile-img.png"
 import logo from "assets/images/logo.png"
 import "./style.scss"
+import { API_BASE_URL_ENV } from "../../helpers/common";
+import http from "../../services/HttpService";
+import {toast} from "react-toastify";
+
+const loginApiEndpoint = API_BASE_URL_ENV() + "/admin/user/login";
 
 const Login = props => {
-  // handleValidSubmit
+  const [loading, setLoading] = useState(false)
+
   const handleValidSubmit = (event, values) => {
-    props.loginUser(values, props.history)
+    setLoading(true)
+    http.post(loginApiEndpoint, values).then((res) => {
+      console.log(res)
+      if(res.status===200){ 
+        toast.success("Successfully login")
+        localStorage.setItem(
+          "authUser",
+          JSON.stringify({ ...res.data, user_type: "admin" }),
+        );
+        props.history.push(`/dashboard`);
+      }  
+   }).catch((error) => {
+    toast.error(error?.response?.data?.message)
+      setLoading(false)
+    })
   }
 
-  //handleTwitterLoginResponse
-  // const twitterResponse = e => {}
 
   return (
     <React.Fragment>
-     <MetaTags>
-          <title>تسجيل الدخول</title>
-        </MetaTags>
+      <MetaTags>
+        <title>تسجيل الدخول</title>
+      </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
           <i className="fas fa-home h2" />
@@ -124,6 +130,8 @@ const Login = props => {
                           <button
                             className="btn btn-primary btn-block waves-effect waves-light"
                             type="submit"
+                            disabled={loading}
+
                           >
                             دخول
                           </button>
@@ -160,18 +168,8 @@ const Login = props => {
   )
 }
 
-const mapStateToProps = state => {
-  const { error } = state.Login
-  return { error }
-}
 
-export default withRouter(
-  connect(mapStateToProps, { loginUser, apiError, socialLogin })(Login)
-)
 
-Login.propTypes = {
-  error: PropTypes.any,
-  history: PropTypes.object,
-  loginUser: PropTypes.func,
-  socialLogin: PropTypes.func
-}
+export default Login
+
+

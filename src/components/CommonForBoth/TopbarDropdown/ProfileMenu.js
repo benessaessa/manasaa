@@ -61,12 +61,13 @@ const ProfileMenu = props => {
           <DropdownItem tag="a" href="/profile">
             {" "}
             <i className="bx bx-user font-size-16 align-middle me-1"/>
-            {props.t("Profile")}{" "}
+            {/* {props.t("Profile")}{" "} */}
+            Profile
           </DropdownItem>
           <div className="dropdown-divider"/>
           <Link to="/logout" className="dropdown-item">
             <i className="bx bx-power-off font-size-16 align-middle me-1 text-danger"/>
-            <span>{props.t("Logout")}</span>
+            <span>Logout</span>
           </Link>
         </DropdownMenu>
       </Dropdown>
@@ -74,16 +75,8 @@ const ProfileMenu = props => {
   )
 }
 
-ProfileMenu.propTypes = {
-  success: PropTypes.any,
-  t: PropTypes.any
-}
+ 
+ 
 
-const mapStatetoProps = state => {
-  const { error, success } = state.Profile
-  return { error, success }
-}
+export default  ProfileMenu
 
-export default withRouter(
-  connect(mapStatetoProps, {})(withTranslation()(ProfileMenu))
-)

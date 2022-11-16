@@ -12,7 +12,7 @@ import Login from "../pages/Authentication/Login"
 import Logout from "../pages/Authentication/Logout"
 import Register from "../pages/Authentication/Register"
 import ForgetPwd from "../pages/Authentication/ForgetPassword"
-
+import ResetPassword from "../pages/Authentication/ResetPassword"
 // Dashboard
 import Dashboard from "pages/Dashboard/index"
 import Home from "pages/Home"
@@ -34,6 +34,8 @@ const authRoutes = [
   { path: "/login", component: Login },
   { path: "/forgot-password", component: ForgetPwd },
   { path: "/register", component: Register },
+  { path : '/admin/reset-password' , component : ResetPassword},
+
 ]
 
 export { userRoutes, authRoutes }
