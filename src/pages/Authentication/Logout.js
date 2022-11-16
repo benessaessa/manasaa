@@ -6,6 +6,8 @@ import { withRouter } from "react-router-dom"
  
 const Logout = props => {
   useEffect(() => {
+    localStorage.removeItem("authUser")
+    props.history.push(`/login`);
    },[])
 
   return <></>
