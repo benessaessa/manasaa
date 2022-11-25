@@ -23,7 +23,9 @@ function Accordion(props) {
   return (
     <div className="accordion__section">
       <button className={`mb-3 accordion bg-white mt-3 ${setActive}`} onClick={toggleAccordion}>
-        <p className="accordion__title">{props.title}</p>
+        <p className="accordion__title">{props.title}
+        <button className="btn btn-primary">إضافة سؤال</button>
+        </p>
         <Chevron className={`${setRotate}`} width={10} fill={"#777"} />
       </button>
       <div

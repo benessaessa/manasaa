@@ -18,6 +18,9 @@ import Dashboard from "pages/Dashboard/index"
 import Home from "pages/Home"
 import EditText from 'pages/EditText/index';
 import EditVoice from 'pages/EditVoice/index';
+import Skills from "pages/Skills"
+import Lessons from "pages/Lessons"
+import Slices from "pages/Slices"
 
 const userRoutes = [
   { path: "/dashboard", component: Dashboard },
@@ -27,6 +30,9 @@ const userRoutes = [
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/home" /> },
   {path: "/home" , component:Home },
+  {path: "/skills" , component:Skills },
+  {path: "/lessons" , component:Lessons },
+  {path: "/slices" , component:Slices },
 ] 
 
 const authRoutes = [

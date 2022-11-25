@@ -133,6 +133,24 @@ const SidebarContent = props => {
                 </li>
               </ul>
             </li>
+            {/* <li>
+              <Link to="/skills" className="waves-effect">
+                <i className="bx bx-briefcase"></i>
+                <span>المهارات</span>
+              </Link>
+            </li> */}
+            <li>
+              <Link to="/lessons" className="waves-effect">
+                <i className="bx bx-book"></i>
+                <span>الدروس</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/slices" className="waves-effect">
+                <i className="bx bx-file"></i>
+                <span>الأجزاء</span>
+              </Link>
+            </li>
             <li>
               <Link to="/items" className="waves-effect">
                 <i className="bx bx-briefcase"></i>
