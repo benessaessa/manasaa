@@ -1,0 +1,46 @@
+.dot {
+  height: 2px;
+  width: 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 1px;
+  }
+
+.dropdown button{
+  background: none;
+  border: none;
+  outline: none !important;
+}
+.bgHeaderTable{
+  background-color: #eff2f7;
+}
+.removebtnhover .btn-secondary ,.removebtnhover .btn-secondary:hover,
+.removebtnhover .btn-secondary:active .removebtnhover .btn-secondary:focus{
+  background-color: unset !important;
+}
+.btnHeight{
+  height: 44px;
+}
+  
+ .page-content{
+   background:#f8f8fb !important
+ }
+
+ 
+.has-search .form-control {
+  padding-left: 2.375rem;
+  height: 40px;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}

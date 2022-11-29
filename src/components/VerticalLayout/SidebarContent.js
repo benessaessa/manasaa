@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef ,useState } from "react"
 
 // //Import Scrollbar
 import SimpleBar from "simplebar-react"
@@ -13,6 +13,7 @@ import { Link } from "react-router-dom"
 import { withTranslation } from "react-i18next"
 
 const SidebarContent = props => {
+  const [showList,setShowList]=useState(false)
   const ref = useRef()
   // Use ComponentDidMount and ComponentDidUpdate method symultaniously
   useEffect(() => {
@@ -94,44 +95,50 @@ const SidebarContent = props => {
           <ul className="metismenu list-unstyled" id="side-menu">
             <li className="menu-title">{props.t("Menu")} </li>
             <li>
-              <Link to="/dashboard" className="waves-effect">
+              <Link to="/admin/dashboard" className="waves-effect">
                 <i className="bx bx-home-circle"></i>
                 <span>الرئيسية</span>
               </Link>
             </li>
             <li>
-              <Link Link to='/#' className='has-arrow waves-effect'>
+              <Link Link to='/#'  onClick={(e)=>{
+                e.preventDefault()
+                setShowList(c=>!c)
+              }}
+                className='has-arrow waves-effect'>
                 <i className='bx bxs-book'></i>
                 <span>المهارات</span>
               </Link>
+              {showList && 
               <ul className='sub-menu' aria-expanded='false'>
                 <li>
-                  <Link Link to={`/edit-text`}>
+                  <Link Link to={`/admin/edit-text`}>
                     <i className='bx bx-edit'></i>
-                    <span>تحرير النص</span>
+                    <span>تحرير النص</span> 
                   </Link>
-                  <Link to={`/edit-voice`}>
+                  <Link to={`/admin/edit-voice`}>
                     <i className='fa fa-microphone'></i>
                     <span>تحرير الصوت</span>
                   </Link>
-                  <Link to={`/booking`}>
+                  <Link to={`/admin/edit-image`}>
                     <i className='bx bxs-image'></i>
                     <span>تحرير صورة</span>
                   </Link>
-                  <Link to={`/booking`}>
+                  <Link to={`/admin/vedio`}>
                     <i className='bx bxs-video'></i>
                     <span>انتاج فيديو</span>
                   </Link>
-                  <Link to={`/booking`}>
+                  <Link to={`/admin/show`}>
                     <i className='bx bx-book'></i>
                     <span>عمل عرض تقديمي</span>
                   </Link>
-                  <Link to={`/booking`}>
+                  <Link to={`/admin/save`}>
                     <i className='bx bx-share'></i>
                     <span>الحفظ والمشاركة</span>
                   </Link>
                 </li>
               </ul>
+              }
             </li>
             {/* <li>
               <Link to="/skills" className="waves-effect">
@@ -140,7 +147,7 @@ const SidebarContent = props => {
               </Link>
             </li> */}
             <li>
-              <Link to="/lessons" className="waves-effect">
+              <Link to="/admin/lessons" className="waves-effect">
                 <i className="bx bx-book"></i>
                 <span>الدروس</span>
               </Link>
@@ -152,7 +159,7 @@ const SidebarContent = props => {
               </Link>
             </li>
             <li>
-              <Link to="/items" className="waves-effect">
+              <Link to="/admin/items" className="waves-effect">
                 <i className="bx bx-briefcase"></i>
                 <span>النتائج</span>
               </Link>

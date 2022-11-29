@@ -2,17 +2,16 @@ import http from "./HttpService";
 import { getJwt } from "./Admin/AuthService";
 import { API_BASE_URL_ENV } from "../helpers/common";
 
-const apiDropdownEndpoint = API_BASE_URL_ENV() + "/common-module-api/dropdown";
-const apiUploadEndpoint = API_BASE_URL_ENV() + "/common-module-api/upload";
+const apiDropdownEndpoint = API_BASE_URL_ENV() + "/admin/settings/dropdown";
+const apiUploadEndpoint = API_BASE_URL_ENV() + "/common/upload";
 const apiUploadOtherEndpoint =
-  API_BASE_URL_ENV() + "/common-module-api/upload/other";
+  API_BASE_URL_ENV() + "/common/upload";
 
 export default class BaseService {
   apiEndpoint;
 
   constructor(apiEndPoint) {
-    http.setJwt(getJwt());
-    this.apiEndpoint = apiEndPoint;
+     this.apiEndpoint = apiEndPoint;
   }
 
   entityUrl(params = []) {
@@ -27,8 +26,8 @@ export default class BaseService {
     return http.get(this.apiEndpoint, { params });
   }
 
-  find(id) {
-    return http.get(this.entityUrl([id]));
+  find(id, params) {
+    return http.get(this.entityUrl([id]), { params });
   }
 
   create(data) {
@@ -37,12 +36,11 @@ export default class BaseService {
 
   update(id, data) {
     const body = { ...data };
-
     return http.put(this.entityUrl([id]), body);
   }
 
-  toggleStatus(id, params = []) {
-    return http.get(this.entityUrl([id, "toggle-activation"]), { params });
+  toggleStatus(model, id, params = []) {
+    return http.get(this.entityUrl(["toggle-activation", model, id]), { params });
   }
 
   getDropDown(model, params = []) {
@@ -53,14 +51,15 @@ export default class BaseService {
     return http.delete(this.entityUrl([id]));
   }
 
-  postUpload(selectedFile) {
+  postUpload(selectedFile, options) {
+
     const formData = new FormData();
     formData.append("selectedFile", selectedFile);
-    return http.post(apiUploadEndpoint, formData);
+    return http.post(apiUploadEndpoint, formData, options);
   }
-  postUploadOther(selectedFile) {
+  postUploadOther(selectedFile, options) {
     const formData = new FormData();
     formData.append("selectedFile", selectedFile);
-    return http.post(apiUploadOtherEndpoint, formData);
+    return http.post(apiUploadOtherEndpoint, formData, options);
   }
 }
