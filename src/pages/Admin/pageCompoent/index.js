@@ -53,7 +53,7 @@ const SystemPage = ({ Service, type, header, subtitle, placeholder, number }) =>
                 }}
                 className="btn btn-primary float-start mb-2 px-4"
               >
-                <i className='fa fa-plus pe-2'></i> إضافة {type}
+                <i className='fa fa-plus pe-2'></i> إضافة دروس {type}
               </button>
             </h3>
             <h1 className='tableSkills'></h1>

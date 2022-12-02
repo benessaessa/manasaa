@@ -6,10 +6,10 @@ import LessonService from "../../../services/Admin/LessonService"
 const EditVoice = (props) => {
   return <PageCompoent
     Service={LessonService}
-    type={"تعديل النص"}
-    placeholder={"تعديل النص"}
-    header={"تعديل النص"}
-    subtitle={"تعديل النص"}
+    type={"تحرير النص"}
+    placeholder={"تحرير النص"}
+    header={"تحرير النص"}
+    subtitle={"تحرير النص"}
     number={1}
 
   />
