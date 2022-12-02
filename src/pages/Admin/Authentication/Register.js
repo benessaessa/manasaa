@@ -25,7 +25,7 @@ const Register = props => {
         localStorage.setItem(
           "token", res.data.access_token
         );
-        props.history.push(`/dashboard`);
+        props.history.push(`/admin/dashboard`);
       }  
    }).catch((error) => {
     toast.error(error?.response?.data?.message)
