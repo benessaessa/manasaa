@@ -24,6 +24,7 @@ function Accordion(props) {
     <div className="accordion__section">
       <button className={`mb-3 accordion bg-white mt-3 ${setActive}`} onClick={toggleAccordion}>
         <p className="accordion__title">{props.title}
+        <button className="btn btn-primary me-4">إضافة سؤال</button>
         </p>
         <Chevron className={`${setRotate}`} width={10} fill={"#777"} />
       </button>
@@ -32,7 +33,6 @@ function Accordion(props) {
         style={{ maxHeight: `${setHeight}` }}
         className="accordion__content"
       >
-        <button className="btn btn-primary">إضافة سؤال</button>
         {/* <div
           className="accordion__text"
           dangerouslySetInnerHTML={{ __html: props.content }}
