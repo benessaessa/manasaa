@@ -37,6 +37,7 @@ const App = props => {
   const getToken = async () => {
     const token = await localStorage.getItem("token")
     dispatch(authenticate({token}))
+    http.setToken(token)
   }
   useEffect(() => {
     getToken(authData.token)

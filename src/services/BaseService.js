@@ -11,6 +11,7 @@ export default class BaseService {
   apiEndpoint;
 
   constructor(apiEndPoint) {
+    http.setToken(getJwt());
      this.apiEndpoint = apiEndPoint;
   }
 

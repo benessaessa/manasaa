@@ -7,7 +7,7 @@ const ProfileApiEndpoint =
   API_BASE_URL_ENV() + "/admin/user/profile";
 const tokenKey = "token";
 
- 
+http.setToken(getJwt());
 
 //TODO refactor duplication
 export async function login(credentials) {

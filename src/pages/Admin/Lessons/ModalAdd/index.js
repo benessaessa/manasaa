@@ -214,7 +214,7 @@ function ModalForm({ modal, toggle, isAdd, editObj, Service, type, id, placehold
                         </AvRadioGroup>
                     </Col> : null
                 }
-                {selectedQuestion ?.value === "choose" || selectedQuestion ?.value === "write" && <Col md={6}>
+                 {(selectedQuestion ?.value === "choose" || selectedQuestion ?.value === "write" )&& <Col md={6}>
                     <Button className="m-4" onClick={() => {
                         setFormData({ ...formData, answers: [...formData.answers, ""] })
                     }}> اضافة اجابة اخرى</Button>  </Col>}
